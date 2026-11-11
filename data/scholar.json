@@ -1,8 +1,13 @@
 {
-  "citations": null,
-  "h_index": null,
-  "i10_index": null,
-  "citations_per_year": {},
-  "updated": null,
+  "citations": 121,
+  "h_index": 6,
+  "i10_index": 4,
+  "citations_per_year": {
+    "2023": 15,
+    "2024": 23,
+    "2025": 45,
+    "2026": 38
+  },
+  "updated": "2026-11-11",
   "source": "https://scholar.google.com/citations?user=0toJwMkAAAAJ"
 }
