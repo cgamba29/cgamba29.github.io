@@ -1,0 +1,1100 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="day">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Chiara Gambardella, PhD · Marine ecologist</title>
+<meta name="description" content="Chiara Gambardella, PhD: marine ecologist and Postdoctoral Researcher at Queen's University Belfast working on large marine species: sharks, tunas and giant skates. Critical habitat, flapper skate, AUV and BRUV surveys, white sharks and shortfin makos in the Mediterranean.">
+<meta name="author" content="Chiara Gambardella">
+<!-- Link previews (WhatsApp, LinkedIn, Slack). After buying the domain, replace YOURDOMAIN below. -->
+<meta property="og:type" content="website">
+<meta property="og:title" content="Chiara Gambardella, PhD · Marine ecologist">
+<meta property="og:description" content="Large marine species, from the open sea to the seabed: sharks, tunas and giant skates.">
+<meta property="og:image" content="https://YOURDOMAIN/images/hero.jpg">
+<!-- Tells Google who you are and which profiles are yours -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Person",
+  "name": "Chiara Gambardella",
+  "honorificSuffix": "PhD",
+  "jobTitle": "Postdoctoral Researcher",
+  "affiliation": { "@type": "Organization", "name": "Queen's University Belfast, Marine Laboratory" },
+  "alumniOf": { "@type": "CollegeOrUniversity", "name": "Università Politecnica delle Marche" },
+  "knowsAbout": ["marine ecology", "elasmobranchs", "sharks", "flapper skate", "critical habitat", "species distribution models", "AUV surveys", "BRUVs", "environmental DNA", "population genomics"],
+  "email": "mailto:c.gambardella@qub.ac.uk",
+  "sameAs": [
+    "https://orcid.org/0000-0001-9943-5028",
+    "https://scholar.google.com/citations?user=0toJwMkAAAAJ",
+    "https://www.researchgate.net/profile/Chiara-Gambardella",
+    "https://www.linkedin.com/in/chiara-gambardella/",
+    "https://www.instagram.com/_saerun/"
+  ]
+}
+</script>
+
+<script>
+/* Theme: white by day, teal at night (visitor's clock). The sun/moon button overrides and remembers. */
+(function () {
+  var t = null;
+  try { t = localStorage.getItem("cg-theme"); } catch (e) {}
+  if (!t) { var h = new Date().getHours(); t = (h >= 7 && h < 19) ? "day" : "night"; }
+  document.documentElement.setAttribute("data-theme", t);
+})();
+/* Missing photo -> box showing the file name it expects */
+function ph(img) {
+  var d = document.createElement("div");
+  d.className = "ph";
+  d.textContent = img.getAttribute("src");
+  img.replaceWith(d);
+}
+</script>
+
+<!-- Fonts: Aptos for text (Inter where Aptos is not installed), Andale Mono for labels (Cousine where Andale is not installed) -->
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cousine&family=Inter:wght@400;600;700&display=swap">
+
+<style>
+:root {
+  --bg: #ffffff; --ink: #13292b; --muted: #5b7072; --accent: #0e6b6b;
+  --soft: #eef5f4; --rule: #d4dfde; --shadow: 0 14px 40px rgba(19, 41, 43, .14);
+  --serif: "Aptos", "Aptos Display", "Inter", "Segoe UI", system-ui, sans-serif;
+  --mono: "Andale Mono", AndaleMono, "Cousine", ui-monospace, Menlo, monospace;
+}
+[data-theme="night"] {
+  --bg: #0c3a3d; --ink: #e9f3f1; --muted: #9ebdba; --accent: #f0c674;
+  --soft: #114649; --rule: rgba(233, 243, 241, .2); --shadow: 0 14px 40px rgba(0, 0, 0, .35);
+}
+* { box-sizing: border-box; }
+body { margin: 0; background: var(--bg); color: var(--ink); font-family: var(--serif); font-size: 17.5px; line-height: 1.65; transition: background .5s, color .5s; -webkit-font-smoothing: antialiased; }
+a { color: var(--accent); text-decoration: none; }
+a:hover { text-decoration: underline; text-underline-offset: 3px; }
+p { margin: 0 0 14px; }
+.mono { font-family: var(--mono); }
+button { font: inherit; color: inherit; }
+
+/* ================= TOP BAR ================= */
+.bar { position: fixed; top: 0; left: 0; right: 0; z-index: 60; background: var(--bg); border-bottom: 1px solid var(--rule); font-family: var(--mono); font-size: 13.5px; transition: background .5s; }
+.bar-in { max-width: 1200px; margin: 0 auto; padding: 0 20px; height: 58px; display: flex; align-items: center; gap: 14px; }
+.brand { color: var(--ink); white-space: nowrap; cursor: pointer; background: none; border: 0; padding: 0; font-family: var(--serif); font-weight: 600; font-size: 15px; }
+.brand b { font-weight: normal; color: var(--accent); }
+.nav { display: flex; align-items: center; margin-left: auto; overflow-x: auto; scrollbar-width: none; }
+.nav::-webkit-scrollbar { display: none; }
+.nav > button { background: none; border: 0; cursor: pointer; padding: 19px 11px; white-space: nowrap; color: var(--ink); }
+.nav > button:hover { color: var(--accent); }
+.nav > button.active { color: var(--accent); box-shadow: inset 0 -2px 0 var(--accent); }
+.nav .chev { display: inline-block; width: 9px; height: 9px; margin-left: 6px; stroke: currentColor; fill: none; stroke-width: 1.6; transition: transform .2s; }
+.nav > button.open .chev { transform: rotate(180deg); }
+@media (max-width: 760px) { .brand { display: none; } .nav { margin-left: 0; flex: 1; -webkit-mask-image: linear-gradient(to right, #000 82%, transparent); mask-image: linear-gradient(to right, #000 82%, transparent); } }
+
+/* sun / moon */
+.theme { display: flex; gap: 2px; border: 1px solid var(--rule); border-radius: 999px; padding: 3px; background: none; cursor: pointer; flex: none; }
+.theme svg { width: 26px; height: 26px; padding: 5px; border-radius: 999px; stroke: var(--muted); fill: none; stroke-width: 1.6; stroke-linecap: round; }
+[data-theme="day"] .theme .sun, [data-theme="night"] .theme .moon { background: var(--accent); stroke: var(--bg); }
+
+/* little windows under menu items */
+.win { position: fixed; top: 64px; z-index: 70; width: 340px; max-width: calc(100vw - 20px); background: var(--bg); border: 1px solid var(--rule); box-shadow: var(--shadow); padding: 8px; opacity: 0; visibility: hidden; transform: translateY(-6px); transition: all .18s; }
+.win.on { opacity: 1; visibility: visible; transform: none; }
+.win .head { font-family: var(--mono); font-size: 11.5px; color: var(--muted); padding: 6px 10px 8px; border-bottom: 1px solid var(--rule); margin-bottom: 4px; }
+.win button { display: flex; gap: 12px; align-items: center; width: 100%; text-align: left; background: none; border: 0; padding: 9px 10px; cursor: pointer; }
+.win button:hover { background: var(--soft); }
+.win button:hover .ico { transform: scale(1.1) rotate(-4deg); }
+.win .ico { width: 40px; height: 32px; }
+.win b { display: block; font-weight: bold; font-size: .95rem; line-height: 1.25; }
+.win small { display: block; color: var(--muted); font-size: .82rem; line-height: 1.35; }
+
+/* ================= LAYOUT ================= */
+.view { display: none; counter-reset: sec; animation: fade .35s ease; }
+.view.on { display: block; }
+@keyframes fade { from { opacity: 0; transform: translateY(6px); } to { opacity: 1; transform: none; } }
+.page { max-width: 840px; margin: 0 auto; padding: 96px 24px 50px; }
+section { padding-top: 44px; }
+h2 { counter-increment: sec; font-size: 1.42rem; margin: 0 0 14px; }
+h2::before { content: counter(sec); display: inline-block; min-width: 1.6em; }
+h2.nonum { counter-increment: none; }
+h2.nonum::before { content: none; }
+
+/* hero */
+.hero { margin-top: 58px; position: relative; }
+.hero img, .hero .ph { width: 100%; height: min(64vh, 620px); object-fit: cover; object-position: 45% 50%; display: block; border: 0; }
+.hero .cap { position: absolute; right: 14px; bottom: 10px; font-family: var(--mono); font-size: 11px; color: #fff; opacity: .8; text-shadow: 0 1px 3px rgba(0,0,0,.6); }
+
+/* name + round portrait on the photo */
+.hero::after { content: ""; position: absolute; inset: 0; background: linear-gradient(to top, rgba(4, 22, 26, .8) 0%, rgba(4, 22, 26, .3) 40%, transparent 62%); pointer-events: none; }
+.hero-id { position: absolute; left: 0; right: 0; bottom: 0; z-index: 2; max-width: 1100px; margin: 0 auto; padding: 0 28px 36px; display: flex; align-items: center; gap: 24px; color: #fff; pointer-events: none; }
+.hero-id h1 { font-weight: 600; letter-spacing: -.01em; font-size: 2.9rem; line-height: 1.08; margin: 0 0 6px; text-shadow: 0 2px 12px rgba(0,0,0,.35); }
+.hero-id .role { margin: 0; font-size: 1.1rem; opacity: .95; text-shadow: 0 1px 8px rgba(0,0,0,.4); }
+.avatar { width: 128px; height: 128px; border-radius: 50%; overflow: hidden; border: 3px solid #fff; flex: none; box-shadow: 0 6px 24px rgba(0,0,0,.35); background: var(--soft); }
+.avatar img, .avatar .ph { width: 100%; height: 100%; object-fit: cover; border: 0 !important; font-size: 9.5px; padding: 8px; }
+.avatar img { display: block; padding: 0; }
+.hero .cap { z-index: 2; }
+/* night: pull the photo towards the page teal and fade it into the background */
+.hero { isolation: isolate; }
+.hero::before { content: ""; position: absolute; inset: 0; z-index: 1; background: #0e5a5c; mix-blend-mode: color; opacity: 0; transition: opacity .5s; pointer-events: none; }
+.hero > img { transition: filter .5s; }
+[data-theme="night"] .hero::before { opacity: .62; }
+[data-theme="night"] .hero > img { filter: brightness(.82) contrast(1.05); }
+[data-theme="night"] .hero::after { background: linear-gradient(to top, var(--bg) 0%, rgba(12, 58, 61, .55) 32%, transparent 62%); }
+.avatar .ph { display: flex; align-items: center; justify-content: center; word-break: break-all; font-size: 8.5px; line-height: 1.3; }
+@media (max-width: 640px) {
+  .hero-id { flex-direction: column; align-items: flex-start; gap: 12px; padding-bottom: 22px; }
+  .avatar { width: 88px; height: 88px; }
+  .hero-id h1 { font-size: 2rem; }
+  .hero-id .role { font-size: .95rem; }
+  .hero .cap { top: 10px; bottom: auto; font-size: 10px; }
+}
+
+/* name block */
+.title { text-align: center; padding: 26px 0 0; }
+.title h1 { font-weight: 600; letter-spacing: -.01em; font-size: 2.8rem; line-height: 1.1; margin: 0 0 10px; }
+.title .role { font-size: 1.15rem; margin: 0 0 18px; }
+.affil { font-family: var(--mono); font-size: 13px; color: var(--muted); margin: 0; }
+.affil b { font-weight: normal; color: var(--ink); }
+.logos { display: flex; justify-content: center; align-items: center; flex-wrap: wrap; gap: 12px; margin-top: 18px; }
+.logo { background: #fff; border: 1px solid var(--rule); border-radius: 6px; padding: 8px 12px; display: flex; align-items: center; height: 64px; }
+.logo img { height: 100%; width: auto; display: block; }
+.logo.sm { height: 52px; padding: 6px 10px; }
+
+/* current */
+.card { display: flex; gap: 18px; padding: 22px; border: 1px solid var(--rule); align-items: flex-start; }
+.card .ico { width: 64px; height: 48px; }
+.card p:last-child { margin: 0; }
+.go { font-family: var(--mono); font-size: 12.5px; background: none; border: 0; color: var(--accent); cursor: pointer; padding: 0; }
+.go:hover { text-decoration: underline; text-underline-offset: 3px; }
+
+/* about */
+.portrait { float: right; width: 230px; margin: 4px 0 12px 26px; }
+.portrait img, .portrait .ph { width: 100%; aspect-ratio: 4/5; object-fit: cover; display: block; border: 1px solid var(--rule); }
+.quote { border-left: 2px solid var(--accent); padding: 2px 0 2px 16px; font-style: italic; color: var(--muted); margin: 18px 0; clear: both; }
+.interests { font-family: var(--mono); font-size: 12.5px; color: var(--muted); }
+.interests span { display: inline-block; border: 1px solid var(--rule); border-radius: 999px; padding: 2px 10px; margin: 0 6px 6px 0; }
+@media (max-width: 640px) { .portrait { float: none; width: 100%; max-width: 300px; margin: 6px auto 16px; } }
+
+/* explore */
+.explore { display: grid; grid-template-columns: repeat(3, 1fr); gap: 12px; }
+.tile { display: flex; flex-direction: column; align-items: center; gap: 10px; padding: 22px 10px 16px; border: 1px solid var(--rule); background: none; cursor: pointer; text-align: center; transition: all .2s; }
+.tile .ico { width: 84px; height: 62px; }
+.tile b { font-family: var(--mono); font-weight: normal; font-size: 12.5px; line-height: 1.35; }
+.tile small { color: var(--muted); font-size: .82rem; line-height: 1.35; }
+.tile:hover { border-color: var(--accent); background: var(--soft); transform: translateY(-3px); }
+.tile:hover .ico { transform: scale(1.08) rotate(-3deg); }
+@media (max-width: 640px) { .explore { grid-template-columns: repeat(2, 1fr); } }
+
+/* icons */
+.ico { stroke: var(--accent); fill: none; stroke-width: 1.5; stroke-linecap: round; stroke-linejoin: round; transition: transform .25s; flex: none; }
+
+/* modal window (explore) */
+.modal { position: fixed; inset: 0; z-index: 90; background: rgba(5, 25, 27, .55); display: none; align-items: center; justify-content: center; padding: 20px; }
+.modal.on { display: flex; }
+.box { background: var(--bg); color: var(--ink); max-width: 560px; width: 100%; max-height: 86vh; overflow-y: auto; border: 1px solid var(--rule); box-shadow: var(--shadow); padding: 26px 28px 24px; position: relative; animation: pop .22s ease; }
+@keyframes pop { from { opacity: 0; transform: scale(.97); } to { opacity: 1; transform: none; } }
+.box .x { position: absolute; top: 10px; right: 12px; background: none; border: 0; font-family: var(--mono); font-size: 20px; cursor: pointer; color: var(--muted); }
+.box .top { display: flex; gap: 16px; align-items: center; margin-bottom: 14px; }
+.box .top .ico { width: 70px; height: 52px; }
+.box h3 { margin: 0; font-size: 1.3rem; line-height: 1.2; }
+.box .tag { font-family: var(--mono); font-size: 11.5px; color: var(--muted); }
+.box p { font-size: .97rem; }
+.box .list button { display: flex; gap: 12px; align-items: center; width: 100%; text-align: left; background: none; border: 0; border-top: 1px solid var(--rule); padding: 10px 2px; cursor: pointer; }
+.box .list button:hover { background: var(--soft); }
+.box .list .ico { width: 40px; height: 32px; }
+.box .list b { display: block; font-size: .95rem; }
+.box .list small { color: var(--muted); font-size: .84rem; }
+.open-page { margin-top: 8px; font-family: var(--mono); font-size: 12.5px; background: var(--accent); color: var(--bg); border: 0; padding: 8px 14px; cursor: pointer; }
+
+/* method chips */
+.chips { display: flex; flex-wrap: wrap; gap: 8px; margin: 6px 0 4px; }
+.chip { display: flex; gap: 8px; align-items: center; border: 1px solid var(--rule); border-radius: 999px; padding: 3px 12px 3px 6px; font-family: var(--mono); font-size: 12px; }
+.chip .ico { width: 30px; height: 24px; }
+.methods { display: grid; grid-template-columns: 1fr 1fr; gap: 12px 24px; }
+.methods div { display: flex; gap: 12px; align-items: flex-start; font-size: .95rem; }
+.methods .ico { width: 42px; height: 34px; }
+.methods b { display: block; font-family: var(--mono); font-weight: normal; font-size: 12.5px; }
+.methods small { color: var(--muted); }
+@media (max-width: 560px) { .methods { grid-template-columns: 1fr; } }
+
+/* topic page header */
+.ptitle { display: flex; justify-content: space-between; align-items: flex-end; gap: 20px; padding-bottom: 18px; border-bottom: 1px solid var(--rule); margin-top: 10px; }
+.ptitle .crumb { font-family: var(--mono); font-size: 12px; color: var(--muted); margin-bottom: 6px; }
+.ptitle h1 { font-weight: 600; letter-spacing: -.01em; font-size: 2.3rem; line-height: 1.12; margin: 0; }
+.ptitle .tag { font-family: var(--mono); font-size: 12.5px; color: var(--muted); margin-top: 8px; }
+.ptitle .ico { width: 120px; height: 90px; }
+@media (max-width: 560px) { .ptitle .ico { display: none; } .ptitle h1 { font-size: 1.9rem; } }
+.with { display: flex; flex-wrap: wrap; gap: 10px; align-items: center; }
+.with .logo { height: 58px; }
+.with .txt { font-family: var(--mono); font-size: 12px; border: 1px solid var(--rule); padding: 6px 12px; }
+.small-note { font-size: .85rem; color: var(--muted); margin-top: 10px; }
+.todo { background: rgba(240, 198, 116, .25); padding: 0 4px; font-family: var(--mono); font-size: .8em; }
+
+/* photos */
+.gallery { display: grid; grid-template-columns: repeat(3, 1fr); gap: 12px; }
+.gallery figure { margin: 0; }
+.gallery img, .gallery .ph { width: 100%; aspect-ratio: 4/3; object-fit: cover; display: block; border: 1px solid var(--rule); cursor: zoom-in; }
+figcaption { font-size: .84rem; color: var(--muted); margin-top: 6px; }
+figcaption b { font-family: var(--mono); font-weight: normal; font-size: 11.5px; color: var(--ink); margin-right: 4px; }
+.ph { display: flex; align-items: center; justify-content: center; text-align: center; font-family: var(--mono); font-size: 11.5px; color: var(--muted); background: var(--soft); border: 1px dashed var(--rule) !important; padding: 10px; cursor: default !important; }
+@media (max-width: 640px) { .gallery { grid-template-columns: 1fr 1fr; } }
+.lightbox { position: fixed; inset: 0; z-index: 100; background: rgba(5, 25, 27, .92); display: none; align-items: center; justify-content: center; padding: 30px; cursor: zoom-out; }
+.lightbox.on { display: flex; }
+.lightbox img { max-width: 100%; max-height: 82vh; display: block; margin: 0 auto; }
+.lightbox p { color: #e9f3f1; font-size: .9rem; text-align: center; margin-top: 12px; }
+
+/* topic pages: text on the left (2/3), photos on the right (1/3) */
+.page.wide { max-width: 1140px; }
+.split { display: grid; grid-template-columns: minmax(0, 2fr) minmax(0, 1fr); gap: 48px; align-items: start; }
+.side { padding-top: 44px; display: flex; flex-direction: column; gap: 18px; }
+.side figure { margin: 0; }
+.side img, .side .ph { width: 100%; aspect-ratio: 4/3; object-fit: cover; display: block; border: 1px solid var(--rule); cursor: zoom-in; }
+.side figure:first-child img, .side figure:first-child .ph { aspect-ratio: 4/5; }
+@media (max-width: 860px) {
+  .split { grid-template-columns: 1fr; gap: 0; }
+  .side { padding-top: 30px; display: grid; grid-template-columns: 1fr 1fr; gap: 12px; }
+  .side figure:first-child { grid-column: 1 / -1; }
+  .side figure:first-child img, .side figure:first-child .ph { aspect-ratio: 4/3; }
+}
+
+/* icon blocks (Outreach page) */
+.blocks { display: flex; flex-direction: column; }
+.blk { display: flex; gap: 16px; align-items: flex-start; padding: 14px 0; border-bottom: 1px solid var(--rule); }
+.blk:first-child { border-top: 1px solid var(--rule); }
+.blk .ico { width: 52px; height: 42px; }
+.blk h3 { font-size: 1.05rem; margin: 0 0 3px; }
+.blk p { margin: 0; font-size: .96rem; }
+
+.morelist { margin-top: 8px; }
+.morelist summary { cursor: pointer; font-family: var(--mono); font-size: 12.5px; color: var(--accent); list-style: none; }
+.morelist summary::-webkit-details-marker { display: none; }
+.morelist summary::before { content: "+ "; }
+.morelist[open] summary::before { content: "− "; }
+.morelist ul { list-style: none; padding: 0; margin: 8px 0 0; }
+.morelist li { display: grid; grid-template-columns: 48px 1fr; gap: 10px; padding: 5px 0; border-bottom: 1px dotted var(--rule); font-size: .92rem; }
+.morelist .when { font-family: var(--mono); font-size: 12px; color: var(--muted); padding-top: 2px; }
+
+/* carousel */
+.carousel { position: relative; }
+.track { display: flex; gap: 12px; overflow-x: auto; scroll-snap-type: x mandatory; scroll-behavior: smooth; scrollbar-width: none; padding-bottom: 4px; }
+.track::-webkit-scrollbar { display: none; }
+.track figure { flex: 0 0 78%; margin: 0; scroll-snap-align: center; }
+.track img, .track .ph { width: 100%; aspect-ratio: 3/2; object-fit: cover; display: block; border: 1px solid var(--rule); cursor: zoom-in; }
+.carousel .arrow { position: absolute; top: calc(50% - 34px); width: 42px; height: 42px; border-radius: 50%; border: 1px solid var(--rule); background: var(--bg); color: var(--ink); cursor: pointer; font-family: var(--mono); font-size: 18px; box-shadow: var(--shadow); display: flex; align-items: center; justify-content: center; }
+.carousel .arrow:hover { color: var(--accent); border-color: var(--accent); }
+.carousel .prev { left: -14px; } .carousel .next { right: -14px; }
+.dots { display: flex; justify-content: center; gap: 7px; margin-top: 12px; }
+.dots button { width: 8px; height: 8px; border-radius: 50%; border: 0; padding: 0; background: var(--rule); cursor: pointer; }
+.dots button.on { background: var(--accent); }
+@media (max-width: 640px) { .track figure { flex-basis: 90%; } .carousel .arrow { display: none; } }
+
+/* Google Scholar metrics (filled from data/scholar.json) */
+.metrics { margin-top: 24px; }
+.metrics .tiles { display: grid; grid-template-columns: repeat(3, 1fr); gap: 12px; }
+.metrics .tile-m { border: 1px solid var(--rule); padding: 16px 18px; }
+.metrics .num { display: block; font-size: 2rem; font-weight: 600; line-height: 1.1; color: var(--accent); }
+.metrics .lab { font-family: var(--mono); font-size: 12px; color: var(--muted); }
+.metrics .src { font-family: var(--mono); font-size: 11.5px; color: var(--muted); margin-top: 8px; }
+
+/* references */
+.filter { font-family: var(--mono); font-size: 12.5px; margin: 0 0 6px; }
+.filter button { background: none; border: 1px solid var(--rule); color: var(--muted); cursor: pointer; padding: 3px 12px; margin-right: 6px; border-radius: 999px; }
+.filter button.on { color: var(--bg); background: var(--accent); border-color: var(--accent); }
+.refs-head { display: flex; justify-content: space-between; align-items: baseline; margin: 28px 0 10px; }
+.refs-head h3 { margin: 0; font-size: 1.05rem; font-style: italic; font-weight: normal; }
+.refs-head span { font-family: var(--mono); font-size: 12px; color: var(--muted); }
+ol.refs { list-style: none; padding: 0; margin: 0; }
+ol.refs li { display: grid; grid-template-columns: 2.7em 1fr; font-size: .93rem; line-height: 1.5; margin-bottom: 11px; }
+ol.refs .n { font-family: var(--mono); font-size: 12px; color: var(--muted); padding-top: 2px; }
+.me { font-weight: bold; color: var(--ink); }
+.doi { font-family: var(--mono); font-size: 11.5px; }
+
+/* media list */
+ul.media { list-style: none; padding: 0; margin: 0; }
+ul.media li { display: grid; grid-template-columns: 100px 1fr; gap: 14px; padding: 10px 0; border-bottom: 1px dotted var(--rule); font-size: .97rem; }
+ul.media .when { font-family: var(--mono); font-size: 12px; color: var(--muted); padding-top: 4px; }
+@media (max-width: 560px) { ul.media li { grid-template-columns: 1fr; gap: 0; } }
+
+/* links list */
+ul.links { padding-left: 1.1em; margin: 0; font-size: .95rem; }
+
+/* CV */
+.cv-sec { padding-top: 34px; }
+.cv-sec h2 { margin-bottom: 8px; }
+.cv-row { display: grid; grid-template-columns: 130px 1fr; gap: 18px; padding: 11px 0; border-bottom: 1px dotted var(--rule); }
+.cv-row .when { font-family: var(--mono); font-size: 12px; color: var(--muted); padding-top: 3px; }
+.cv-row b { display: block; }
+.cv-row small { display: block; color: var(--muted); font-size: .9rem; }
+@media (max-width: 560px) { .cv-row { grid-template-columns: 1fr; gap: 0; } }
+
+/* contact */
+.corr { border-top: 2px solid var(--ink); border-bottom: 2px solid var(--ink); padding: 28px 0 24px; }
+.corr .q { font-weight: 600; font-size: 1.75rem; line-height: 1.25; margin: 0 0 12px; }
+.corr .q em { color: var(--accent); }
+.btns { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 14px; }
+.btn { display: inline-flex; align-items: center; gap: 8px; border: 1px solid var(--rule); border-radius: 999px; padding: 7px 16px 7px 12px; font-family: var(--mono); font-size: 12.5px; color: var(--ink); transition: all .2s; }
+.btn svg { width: 16px; height: 16px; stroke: var(--accent); fill: none; stroke-width: 1.6; stroke-linecap: round; stroke-linejoin: round; }
+.btn:hover { text-decoration: none; border-color: var(--accent); background: var(--soft); color: var(--accent); }
+.btn.main { background: var(--accent); border-color: var(--accent); color: var(--bg); }
+.btn.main svg { stroke: var(--bg); }
+.btn.main:hover { opacity: .9; color: var(--bg); background: var(--accent); }
+.based { font-family: var(--mono); font-size: 12px; color: var(--muted); margin-top: 18px; }
+
+footer { border-top: 1px solid var(--rule); margin-top: 30px; }
+.foot { max-width: 840px; margin: 0 auto; padding: 20px 24px 36px; font-family: var(--mono); font-size: 12px; color: var(--muted); display: flex; justify-content: space-between; flex-wrap: wrap; gap: 10px; }
+</style>
+</head>
+
+<body>
+
+<!-- ================= ICONS (original line drawings) ================= -->
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+<defs>
+  <!-- single icons, 48 x 48 -->
+  <symbol id="i-skate" viewBox="0 0 48 48"><path d="M24 4C25.5 9 29 14 42 21.5C38 25 31.5 27 27.2 28L25.6 31.5L24.8 44.5H23.2L22.4 31.5L20.8 28C16.5 27 10 25 6 21.5C19 14 22.5 9 24 4Z"/><path d="M20.8 28C19 30 18.6 32.2 19.6 33.2M27.2 28C29 30 29.4 32.2 28.4 33.2"/></symbol>
+  <symbol id="i-egg" viewBox="0 0 48 48"><path d="M17 12.5Q24 15 31 12.5Q34.5 24 31 35.5Q24 33 17 35.5Q13.5 24 17 12.5Z"/><path d="M17 12.5Q15.5 8.5 11.5 7M31 12.5Q32.5 8.5 36.5 7M17 35.5Q15.5 39.5 11.5 41M31 35.5Q32.5 39.5 36.5 41"/><path d="M24 17.5V30.5" opacity=".45"/></symbol>
+  <symbol id="i-auv" viewBox="0 0 48 48"><path d="M6 20C6 16.5 9 15.5 13 15.5H33L39 18V23L33 25.5H13C9 25.5 6 24 6 20Z"/><path d="M35 16L38.5 11M35 25L38.5 30M39 18.5H42M39 22.5H42M42 17V24"/><circle cx="10.5" cy="20.5" r="1.6"/><path d="M17 27.5L8 40M30 27.5L39 40" stroke-dasharray="1.6 2.4"/><path d="M9.5 38Q23.5 44 37.5 38" stroke-dasharray="1.6 2.4"/></symbol>
+  <symbol id="i-shark" viewBox="0 0 48 48"><path d="M3 26C9 22 17 20.5 23 20.5L26.5 12.5L29.5 21C34 21.3 38 22.3 40.5 23.3L45 17L44 25.2L46 32.5L40.5 27.3C35.5 29.2 28 30.2 22 30.2L19.5 34.5L17.7 30.1C11.5 29.8 6.5 28.3 3 26Z"/><path stroke-width=".8" d="M10.6 23.40Q11.2 26.00 10.6 28.60 M12.6 23.60Q13.2 26.00 12.6 28.40 M14.6 23.80Q15.2 26.00 14.6 28.20 M16.6 24.00Q17.2 26.00 16.6 28.00 M18.6 24.20Q19.2 26.00 18.6 27.80"/><circle cx="8" cy="25" r=".6"/></symbol>
+  <symbol id="i-tuna" viewBox="0 0 48 48"><path d="M3 24C9 18.5 19 17 28 17.8C33 18.4 36.5 20.5 39 23L45 15.5L43.2 24L45 32.5L39 25C36.5 27.5 33 29.6 28 30.2C19 31 9 29.5 3 24Z"/><path d="M19 18L22.5 12L26 17.8"/><path d="M30.5 18.4l1.4-2M33.5 19.4l1.4-2M30.5 29.6l1.4 2M33.5 28.6l1.4 2"/><path d="M13 24.5L20 27"/><circle cx="8" cy="23.4" r=".7"/></symbol>
+  <symbol id="i-bruv" viewBox="0 0 48 48"><rect x="6" y="13" width="18" height="14" rx="2"/><circle cx="15" cy="20" r="4"/><path d="M24 20H37"/><rect x="37" y="16" width="6" height="8" rx="1"/><path d="M9 27L6 37M21 27L24 37M3 37H45"/></symbol>
+  <symbol id="i-tag" viewBox="0 0 48 48"><path d="M9 33L27 21.5C29.5 20 32.3 23.8 30 25.6L12.5 37.5C10 39 7 35 9 33Z"/><path d="M29.5 21.5L37 10"/><path d="M38 5.5A6 6 0 0 1 43 11M36.5 1.5A11 11 0 0 1 46.5 12" opacity=".7"/></symbol>
+  <symbol id="i-edna" viewBox="0 0 48 48"><path d="M24 4C30 13 36.5 20.5 36.5 29A12.5 12.5 0 0 1 11.5 29C11.5 20.5 18 13 24 4Z"/><path d="M20 19C28 23.5 20 29.5 28 34M28 19C20 23.5 28 29.5 20 34"/></symbol>
+  <symbol id="i-dna" viewBox="0 0 48 48"><path d="M16 5C32 14 16 34 32 43M32 5C16 14 32 34 16 43"/><path d="M18.5 9.5h11M20 17h8M20 31h8M18.5 38.5h11" opacity=".6"/></symbol>
+  <symbol id="i-web" viewBox="0 0 48 48"><circle cx="24" cy="9" r="4"/><circle cx="12" cy="25" r="4"/><circle cx="36" cy="25" r="4"/><circle cx="24" cy="40" r="4"/><path d="M21.6 12.2L14.4 21.8M26.4 12.2L33.6 21.8M14.4 28.2L21.6 36.8M33.6 28.2L26.4 36.8M16 25H32"/></symbol>
+  <symbol id="i-map" viewBox="0 0 48 48"><rect x="5" y="5" width="38" height="38" rx="2"/><path d="M5 17H43M5 30H43M17 5V43M30 5V43" opacity=".25"/><path d="M13 31C9 23 17 13 26 15C35 17 37 28 29 32C22 35.5 16 36 13 31Z"/><path d="M19 27C17.5 23 21 19.5 25.5 20.5C30 21.5 30 27 26 28.5C22.5 29.5 20 29.5 19 27Z"/></symbol>
+  <symbol id="i-hook" viewBox="0 0 48 48"><circle cx="28" cy="6" r="2.5"/><path d="M28 8.5V30A8.5 8.5 0 0 1 11 30V25.5L7.5 29"/></symbol>
+  <symbol id="i-pulse" viewBox="0 0 48 48"><path d="M3 26H13L17 15L23 35L28 20L31 26H45"/></symbol>
+  <symbol id="i-boat" viewBox="0 0 48 48"><path d="M5 30H43L37 38H11Z"/><path d="M24 30V7L37 26H24"/><path d="M4 43Q9 40.5 14 43T24 43T34 43T44 43" opacity=".6"/></symbol>
+  <symbol id="i-talk" viewBox="0 0 48 48"><path d="M6 9H30V25H16L10 31V25H6Z"/><path d="M34 17H42V33H38V38L32 33H20V29"/></symbol>
+  <symbol id="i-mic" viewBox="0 0 48 48"><rect x="18" y="5" width="12" height="20" rx="6"/><path d="M12 21A12 12 0 0 0 36 21M24 33V41M17 41H31"/></symbol>
+  <symbol id="i-cap" viewBox="0 0 48 48"><path d="M4 18L24 9L44 18L24 27Z"/><path d="M12 22V32C16 36 32 36 36 32V22"/><path d="M44 18V30"/></symbol>
+  <symbol id="i-school" viewBox="0 0 48 48"><path d="M6 42V20L24 8L42 20V42Z"/><path d="M19 42V31H29V42"/><circle cx="24" cy="21" r="4"/></symbol>
+
+  <!-- combined icons, 64 x 48 -->
+  <symbol id="i-flapper" viewBox="0 0 64 48">
+    <path d="M22 4C23.5 9 27 14 40 21.5C36 25 29.5 27 25.2 28L23.6 31.5L22.8 44.5H21.2L20.4 31.5L18.8 28C14.5 27 8 25 4 21.5C17 14 20.5 9 22 4Z"/>
+    <path d="M18.8 28C17 30 16.6 32.2 17.6 33.2M25.2 28C27 30 27.4 32.2 26.4 33.2"/>
+    <g transform="translate(37 13) scale(.62)"><path d="M17 12.5Q24 15 31 12.5Q34.5 24 31 35.5Q24 33 17 35.5Q13.5 24 17 12.5Z"/><path d="M17 12.5Q15.5 8.5 11.5 7M31 12.5Q32.5 8.5 36.5 7M17 35.5Q15.5 39.5 11.5 41M31 35.5Q32.5 39.5 36.5 41"/></g>
+  </symbol>
+  <symbol id="i-wsc" viewBox="0 0 64 48">
+    <path d="M3 30C9 26 17 24.5 23 24.5L26.5 16.5L29.5 25C34 25.3 38 26.3 40.5 27.3L45 21L44 29.2L46 36.5L40.5 31.3C35.5 33.2 28 34.2 22 34.2L19.5 38.5L17.7 34.1C11.5 33.8 6.5 32.3 3 30Z"/>
+    <path stroke-width=".8" d="M10.6 27.40Q11.2 30.00 10.6 32.60 M12.6 27.60Q13.2 30.00 12.6 32.40 M14.6 27.80Q15.2 30.00 14.6 32.20 M16.6 28.00Q17.2 30.00 16.6 32.00 M18.6 28.20Q19.2 30.00 18.6 31.80"/>
+    <g transform="translate(44 0) scale(.42)"><path d="M24 4C30 13 36.5 20.5 36.5 29A12.5 12.5 0 0 1 11.5 29C11.5 20.5 18 13 24 4Z"/><path d="M20 19C28 23.5 20 29.5 28 34M28 19C20 23.5 28 29.5 20 34"/></g>
+    <path d="M30 14A5 5 0 0 1 35 9M28 12A9 9 0 0 1 37 4" opacity=".7"/>
+  </symbol>
+  <symbol id="i-tunahook" viewBox="0 0 64 48">
+    <path d="M3 30C9 24.5 19 23 28 23.8C33 24.4 36.5 26.5 39 29L45 21.5L43.2 30L45 38.5L39 31C36.5 33.5 33 35.6 28 36.2C19 37 9 35.5 3 30Z"/>
+    <path d="M19 24L22.5 18L26 23.8"/><path d="M30.5 24.4l1.4-2M33.5 25.4l1.4-2M30.5 35.6l1.4 2M33.5 34.6l1.4 2"/>
+    <path d="M56 2V20A5 5 0 0 1 46 20V17.5L44 19.5"/>
+  </symbol>
+  <symbol id="i-medshark" viewBox="0 0 64 48">
+    <path d="M3 28C9 24 17 22.5 23 22.5L26.5 14.5L29.5 23C34 23.3 38 24.3 40.5 25.3L45 19L44 27.2L46 34.5L40.5 29.3C35.5 31.2 28 32.2 22 32.2L19.5 36.5L17.7 32.1C11.5 31.8 6.5 30.3 3 28Z"/>
+    <path stroke-width=".8" d="M10.6 25.40Q11.2 28.00 10.6 30.60 M12.6 25.60Q13.2 28.00 12.6 30.40 M14.6 25.80Q15.2 28.00 14.6 30.20 M16.6 26.00Q17.2 28.00 16.6 30.00 M18.6 26.20Q19.2 28.00 18.6 29.80"/>
+    <g transform="translate(46 8) scale(.36)"><path d="M16 5C32 14 16 34 32 43M32 5C16 14 32 34 16 43"/><path d="M18.5 9.5h11M20 17h8M20 31h8M18.5 38.5h11"/></g>
+  </symbol>
+  <symbol id="i-outreach" viewBox="0 0 64 48">
+    <path d="M4 9H30V25H15L9 31V25H4Z"/><path d="M34 17H44V33H40V38L34 33H21V29"/>
+    <g transform="translate(40 6) scale(.48)"><path d="M4 18L24 9L44 18L24 27Z"/><path d="M12 22V32C16 36 32 36 36 32V22"/></g>
+  </symbol>
+  <symbol id="i-media" viewBox="0 0 64 48">
+    <rect x="12" y="5" width="12" height="20" rx="6"/><path d="M6 21A12 12 0 0 0 30 21M18 33V41M11 41H25"/>
+    <path d="M36 14A10 10 0 0 1 36 30M41 9A17 17 0 0 1 41 35M46 5A23 23 0 0 1 46 39" opacity=".7"/>
+  </symbol>
+</defs>
+</svg>
+
+<!-- ================= TOP BAR ================= -->
+<header class="bar">
+  <div class="bar-in">
+    <button class="brand" data-go="home">Chiara Gambardella</button>
+    <nav class="nav" id="nav">
+      <button data-go="home" data-p="home">Home</button>
+      <button data-win="research" data-p="research">Research<svg class="chev" viewBox="0 0 10 10"><path d="M1 3l4 4 4-4"/></svg></button>
+      <button data-go="papers" data-p="papers">Publications</button>
+      <button data-win="expeditions" data-p="expeditions">Expeditions &amp; Activities<svg class="chev" viewBox="0 0 10 10"><path d="M1 3l4 4 4-4"/></svg></button>
+      <button data-go="media" data-p="media">Media</button>
+      <button data-go="cv" data-p="cv">CV</button>
+      <button data-go="contact" data-p="contact">Contacts</button>
+    </nav>
+    <button class="theme" id="theme" aria-label="Day or night">
+      <svg class="sun" viewBox="0 0 24 24"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M2 12h2M20 12h2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4"/></svg>
+      <svg class="moon" viewBox="0 0 24 24"><path d="M20 14.5A8 8 0 1 1 9.5 4a6.5 6.5 0 0 0 10.5 10.5Z"/></svg>
+    </button>
+  </div>
+</header>
+
+<div class="win" id="win"></div>
+
+
+<!-- =====================================================================
+     HOME
+     ===================================================================== -->
+<div class="view" data-view="home">
+
+  <div class="hero">
+    <img src="images/hero.jpg" alt="Shortfin mako approaching a baited camera" onerror="ph(this)">
+    <div class="hero-id">
+      <div class="avatar"><img src="images/portrait.jpg" alt="Chiara Gambardella" onerror="ph(this)"></div>
+      <div>
+        <h1>Chiara Gambardella, PhD</h1>
+        <p class="role">Marine ecologist working on large marine species, from the open sea to the seabed</p>
+      </div>
+    </div>
+    <span class="cap">Shortfin mako at a baited camera · © White Shark Chase 2025</span>
+  </div>
+
+  <div class="page" style="padding-top:0">
+
+    <div class="title">
+      <p class="affil"><b>Postdoctoral Researcher</b> · Marine Laboratory, Queen's University Belfast</p>
+      <div class="logos">
+        <span class="logo"><img src="images/logo-qub.png" alt="Queen's University Belfast"></span>
+        <span class="logo"><img src="images/logo-mosaic.png" alt="MOSAIC project"></span>
+        <span class="logo"><img src="images/logo-univpm-mzl.png" alt="Marine Zoology Laboratory, UNIVPM"></span>
+        <span class="logo"><img src="images/logo-seaql.png" alt="SeaQL Lab, Virginia Tech"></span>
+      </div>
+    </div>
+
+    <section>
+      <h2 class="nonum">Currently</h2>
+      <div class="card">
+        <svg class="ico"><use href="#i-flapper"/></svg>
+        <div>
+          <p>Postdoctoral Researcher on the <b>MOSAIC</b> project at the Marine Laboratory of Queen's University Belfast. My work has two parts:</p>
+          <p><b>Habitat association.</b> Modelling where threatened, OSPAR-listed sharks, skates and rays occur in Irish and Northern Irish waters, and which habitats they are linked to.</p>
+          <p><b>Critical habitat.</b> For target species such as the flapper skate, finding the sites they depend on, like egg-laying grounds, with AUV surveys of the seabed.</p>
+          <p><button class="go" data-go="flapper">read more →</button></p>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <h2 class="nonum">About me</h2>
+      <p>I am a marine ecologist and Postdoctoral Researcher at the Marine Laboratory of Queen's University Belfast, working on the MOSAIC project (Multi-disciplinary Ocean Sensing for Adaptive International Conservation). I identify critical areas for the conservation of elasmobranchs (sharks, rays and skates) across the waters of Ireland and Northern Ireland, combining ecological data from multiple monitoring techniques to support conservation planning, management and long-term monitoring.</p>
+      <p>My work combines quantitative methods with emerging monitoring technologies. I integrate field-based and molecular approaches, including <b>telemetry</b>, <b>stereo- and mono-BRUVs</b>, <b>tissue sampling</b> and <b>environmental DNA</b>, to study species distribution, habitat use, movement and ecological interactions at multiple spatial scales.</p>
+      <p>I hold a PhD in Life and Environmental Sciences (Doctor Europaeus) from Università Politecnica delle Marche, co-funded by Stazione Zoologica Anton Dohrn and developed with the <a href="https://seaql.org/?page_id=121">SeaQL lab</a> at Virginia Tech, on the distribution, connectivity and conservation of the white shark and the shortfin mako in the Mediterranean. Alongside my Northeast Atlantic work, I continue shark conservation research in the Mediterranean, to improve ecological knowledge and support evidence-based management of threatened species.</p>
+      <p>I am active in science communication and stakeholder engagement. I collaborate with sharkPulse Italia, take part in public events and work with ocean users and recreational fishers to promote marine conservation and citizen science. As Co-Chair of the <a href="https://igfa.org/2025/03/17/newly-appointed-igfa-representatives-march-2025/">IGFA</a> EU-MED Conservation Committee, I work with the recreational fishing community on sustainable practices for large pelagic species, and I aim to strengthen dialogue among science, policy and stakeholders.</p>
+      <p class="quote">Effective marine conservation requires collaboration across disciplines, sectors and communities, linking research, management and society.</p>
+      <p class="interests">off the clock: <span>hiking</span><span>surfing</span><span>freediving</span><span>photography</span><span>fishing</span><span>nature</span></p>
+    </section>
+
+    <section>
+      <h2 class="nonum">In the field</h2>
+      <div id="homeCarousel"></div>
+    </section>
+
+    <section>
+      <h2 class="nonum">Explore</h2>
+      <div class="explore" id="explore"></div>
+    </section>
+
+    <section id="home-contact">
+      <div class="corr" id="corrHome"></div>
+    </section>
+  </div>
+</div>
+
+
+<!-- =====================================================================
+     TOPIC PAGE (filled from the TOPICS list in the script)
+     ===================================================================== -->
+<div class="view" data-view="topic"><div class="page wide" id="topicPage"></div></div>
+
+
+<!-- =====================================================================
+     PUBLICATIONS
+     ===================================================================== -->
+<div class="view" data-view="papers">
+<div class="page">
+  <div class="ptitle"><div><div class="crumb">Research output</div><h1>Publications</h1>
+    <div class="tag"><a href="https://scholar.google.com/citations?user=0toJwMkAAAAJ&amp;hl=en">Google Scholar</a> · <a href="https://www.researchgate.net/profile/Chiara-Gambardella">ResearchGate</a></div></div>
+    <svg class="ico"><use href="#i-dna"/></svg></div>
+  <div class="metrics" id="metrics" hidden></div>
+  <div class="filter" id="filter" style="margin-top:22px"><button data-f="all" class="on">all</button><button data-f="first">first-author</button></div>
+  <div id="refs"></div>
+</div>
+</div>
+
+
+<!-- =====================================================================
+     MEDIA
+     ===================================================================== -->
+<div class="view" data-view="media">
+<div class="page">
+  <div class="ptitle"><div><div class="crumb">In the news</div><h1>Media</h1><div class="tag">radio, TV, talks and features</div></div><svg class="ico"><use href="#i-media"/></svg></div>
+  <section style="padding-top:22px"><ul class="media" id="mediaAll"></ul></section>
+  <section><div id="mediaCarousel"></div></section>
+</div>
+</div>
+
+
+<!-- =====================================================================
+     CV (entries are in the CV list in the script)
+     ===================================================================== -->
+<div class="view" data-view="cv">
+<div class="page">
+  <div class="ptitle"><div><div class="crumb">Curriculum vitae</div><h1>CV</h1>
+    <div class="btns"><a class="btn main" href="files/CV_Chiara_Gambardella.pdf">
+      <svg viewBox="0 0 24 24"><path d="M12 4v11M7 10l5 5 5-5M5 20h14"/></svg>Download full CV (PDF)</a></div></div>
+    <svg class="ico"><use href="#i-cap"/></svg></div>
+  <div id="cvBody"></div>
+</div>
+</div>
+
+
+<!-- =====================================================================
+     CONTACT
+     ===================================================================== -->
+<div class="view" data-view="contact">
+<div class="page">
+  <div class="ptitle"><div><div class="crumb">Get in touch</div><h1>Contacts</h1></div><svg class="ico"><use href="#i-talk"/></svg></div>
+  <section style="padding-top:26px"><div class="corr" id="corrPage"></div></section>
+</div>
+</div>
+
+<footer><div class="foot">
+  <span>&copy; <span id="yr"></span> Chiara Gambardella</span>
+  <a href="mailto:c.gambardella@qub.ac.uk">c.gambardella@qub.ac.uk</a>
+  <span>Marine Laboratory, Queen's University Belfast</span>
+</div></footer>
+
+<div class="modal" id="modal"><div class="box" id="box"></div></div>
+<div class="lightbox" id="lightbox"><div><img id="lbImg" alt=""><p id="lbCap"></p></div></div>
+
+
+<script>
+/* #####################################################################
+   CONTENT. Edit the text here, like a .bib file.
+   ##################################################################### */
+
+/* ---------- methods (icon, name, one line) ---------- */
+var METHODS = {
+  auv:   ["i-auv",   "AUV surveys",             "robots that map the seabed with sonar and cameras"],
+  bruv:  ["i-bruv",  "Stereo & mono BRUVs",     "baited cameras: who is there, how many, how big"],
+  tag:   ["i-tag",   "Satellite telemetry",     "tags that record where animals go"],
+  edna:  ["i-edna",  "Environmental DNA",       "detecting species from a bottle of seawater"],
+  dna:   ["i-dna",   "Population genomics",     "how connected populations are"],
+  iso:   ["i-web",   "Stable isotopes",         "what predators eat"],
+  model: ["i-map",   "Spatial models",          "where and when species are found"],
+  fish:  ["i-hook",  "Fisheries collaboration", "fishers as partners in research"],
+  cit:   ["i-pulse", "Citizen science",         "sightings and photos become data"],
+  teach: ["i-cap",   "Teaching",                "lessons for students of all ages"]
+};
+
+/* ---------- partner logos ---------- */
+var LOGOS = {
+  qub:    ["images/logo-qub.png", "Queen's University Belfast"],
+  mosaic: ["images/logo-mosaic.png", "MOSAIC"],
+  peace:  ["images/logo-peaceplus.png", "PEACEPLUS"],
+  mzl:    ["images/logo-univpm-mzl.png", "Marine Zoology Laboratory, UNIVPM"],
+  seaql:  ["images/logo-seaql.png", "SeaQL Lab"]
+};
+
+/* ---------- topics: each one becomes a page, a window and a menu entry ----------
+   group: research | expeditions
+   what / why: paragraphs (HTML allowed)
+   methods: keys from METHODS     with: keys from LOGOS or plain text
+   papers: keys (k) from PUBS     photos: [file, caption]
+   links: [text, url]                                                              */
+var TOPICS = [
+  { id: "flapper", group: "research", icon: "i-flapper",
+    title: "Flapper skate & egg-case nurseries", tag: "MOSAIC · Queen's University Belfast",
+    short: "Habitat associations of threatened elasmobranchs and egg-laying sites of Europe's largest skate.",
+    what: "<p>The flapper skate (<i>Dipturus intermedius</i>) is the largest skate in Europe and is Critically Endangered. Females lay large egg cases on the seabed, where the embryos grow until they hatch.</p><p>Within the <b>MOSAIC</b> project (Multi-disciplinary Ocean Sensing for Adaptive International Conservation) I work on two work packages:</p><p><b>Habitat association.</b> Which habitats do threatened, OSPAR-listed sharks, skates and rays rely on in Irish and Northern Irish waters?</p><p><b>Critical habitat.</b> For the flapper skate, the most critical places are the sites where females lay their egg cases, which stay on the seabed until the young hatch. I search for these sites with an autonomous underwater vehicle (AUV): side-scan sonar first maps large areas of seabed to find suitable habitat, then the AUV camera goes back to photograph it and confirm where egg cases are. The result is a map of the exact patches of seabed that need protection.</p>",
+    why: "<p>Protecting a nursery protects a whole generation. Knowing exactly where egg cases are laid lets managers protect those patches of seabed, and the same data support conservation planning and long-term monitoring.</p>",
+    methods: ["auv", "bruv", "model"],
+    with: ["qub", "mosaic", "peace"],
+    note: "MOSAIC is supported by PEACEPLUS, a programme managed by the Special EU Programmes Body (SEUPB).",
+    papers: ["lifehist", "injury", "t-masts"],
+    photos: [["images/flapper-1.jpg", ""], ["images/flapper-2.jpg", ""]] },
+
+  { id: "medsharks", group: "research", icon: "i-medshark",
+    title: "Mediterranean sharks", tag: "PhD · UNIVPM, Stazione Zoologica Anton Dohrn, SeaQL lab",
+    short: "Distribution, connectivity and diet of white sharks and shortfin makos.",
+    what: "<p>My PhD in Life and Environmental Sciences (Doctor Europaeus, Università Politecnica delle Marche, co-funded by Stazione Zoologica Anton Dohrn and developed with the SeaQL lab at Virginia Tech) studied the ecology and population connectivity of two Mediterranean apex predators: the <i>white shark</i> and the <i>shortfin mako</i>.</p><p>Along the way I worked at the Museo Nacional de Ciencias Naturales in Madrid (genomics), the Instituto de Ciencias del Mar in Barcelona (stable isotopes and distribution models) and Virginia Tech (point process models and genetics).</p><p>I looked at where they are, how abundant they are, what they eat and how connected the Mediterranean population is with the Atlantic. Alongside my Northeast Atlantic work, I continue this research in the Mediterranean.</p>",
+    why: "<p>Both species are Critically Endangered in the Mediterranean. Knowing where young sharks live, what they eat and how far populations mix tells us where, and at what scale, management should act.</p>",
+    methods: ["dna", "iso", "model", "bruv", "fish"],
+    with: ["mzl", "seaql", "Stazione Zoologica Anton Dohrn"],
+    papers: ["genetics", "trophic", "makoabund", "yoy", "hammer", "hammertun", "jaw", "t-si", "t-eea", "t-ices"],
+    photos: [["images/medsharks-1.jpg", ""], ["images/medsharks-2.jpg", ""], ["images/medsharks-3.jpg", ""]] },
+
+  { id: "wsc", group: "expeditions", icon: "i-wsc",
+    title: "White Shark Chase", tag: "Expeditions · 2021, 2022, 2023, 2025",
+    short: "Looking for white sharks in the open Mediterranean, with eDNA, cameras and tags.",
+    what: "<p><b>White Shark Chase (WSC)</b> is a project led by Dr Francesco Ferretti (SeaQL lab, Virginia Tech). It develops an integrated framework combining multiple approaches to find and study elusive open-ocean predators, mainly white sharks in the Mediterranean Sea. Four expeditions so far: 2021, 2022, 2023 and 2025.</p><p>I am a field operator and project assistant for the Ferretti Lab (Virginia Tech) and was on board for all four expeditions. I help organise and collect data before each expedition, designed and built the pelagic BRUVs, and on board I deploy cameras, fish and chum, take eDNA samples, run DNA extraction, quantification and amplification on the vessel, and help with satellite tagging. Back on land: video analysis (species identification, MaxN).</p>",
+    why: "<p>Mediterranean white sharks are rare and hard to see. <b>eDNA</b> tells us they were there, <b>baited cameras</b> let us see them, and <b>satellite tags</b> follow them for months: together they show where these sharks actually live.</p>",
+    methods: ["edna", "tag", "bruv", "model", "fish"],
+    with: ["seaql"],
+    papers: ["wstracks", "makotrack", "edna", "wsprotect", "t-sg1", "t-sg2", "a-glex", "a-graspa"],
+    links: [["WSC project page, SeaQL", "https://seaql.org/?page_id=121"]],
+    photos: [["images/wsc-1.jpg", ""], ["images/wsc-2.jpg", ""], ["images/wsc-3.jpg", ""]] },
+
+  { id: "igfa", group: "expeditions", icon: "i-tunahook",
+    title: "Recreational fisheries", tag: "IGFA · Europe & Mediterranean Council",
+    short: "Working with anglers on large pelagic species.",
+    what: "<p>Since 2024 I am an <b>IGFA</b> (International Game Fish Association) Representative and Co-Chair of the Conservation Committee of the Europe &amp; Mediterranean Council. I lead outreach with recreational anglers, represent IGFA at international fishing fairs such as Pescare Show, and produce quarterly reports for the Council.</p>",
+    why: "<p>Anglers spend more time at sea than any scientist. Working with them on sustainable practices for large pelagic species, like tunas and sharks, turns catches into data and fishers into allies.</p>",
+    methods: ["fish", "cit", "tag"],
+    with: ["IGFA", "Pescare Show"],
+    links: [["Newly appointed IGFA representatives, 2025", "https://igfa.org/2025/03/17/newly-appointed-igfa-representatives-march-2025/"]],
+    photos: [["images/igfa-1.jpg", ""], ["images/igfa-2.jpg", ""], ["images/igfa-3.jpg", ""]] },
+
+  { id: "outreach", group: "expeditions", icon: "i-outreach",
+    title: "Outreach, teaching & fieldwork", tag: "Talks · schools · citizen science · teaching · field activities",
+    short: "Public talks, schools, citizen science, teaching and field activities at sea.",
+    what: "<p>Science communication and stakeholder engagement are part of my work: talking with the public, teaching students of all ages, working with the people who use the sea and joining field activities at sea.</p>",
+    sections: [
+      { id: "outreach-sec", title: "Outreach", blocks: [
+        { icon: "i-talk", title: "Public talks & events",
+          text: "Talks, panels and trainings on sharks, the sea and responsible fishing, for the public, fishers and the fishery sector.",
+          list: ["All talks &amp; events", [
+            ["2026", "<i>Conero ecosystems: marine biodiversity, human pressures and protection strategies</i>, Lions Club Ancona"],
+            ["2026", "<a href='https://www.instagram.com/reel/DWrBtOdoiLD/'><i>The future of the Mediterranean Sea</i></a>, CIESM, Monaco, sponsored by AcliTerra (with M. Rio and C. Santolini)"],
+            ["2026", "Panel <i>We all pull from the same data source</i>, Pescare Show (moderator)"],
+            ["2025", "<i>Sharks in the Mediterranean Sea: let's build the future</i>, Sub Tridente, Pesaro (with F. Ferretti)"],
+            ["2024", "<i>The protection of PET species: case study on elasmobranchs</i>, training for the fishery and aquaculture sectors, Oceanis s.r.l."],
+            ["2024", "<i>Sharks in the Mediterranean Sea: let's build the future</i>, Fano Ocean Action (with F. Ferretti)"],
+            ["2023", "<i>Large marine predators in the Mediterranean Sea: a losing game or is there still hope for their recovery?</i>, SZN seminar"],
+            ["2023", "<i>Alien species, from sea to lagoons</i>, AlMeni CircoMercato, Rimini"],
+            ["2023", "Talk with Fondazione Cetacea, Nautical Club, Rimini"],
+            ["2021", "Conero Tuna Cup, Ancona"],
+            ["2021", "Blue Life Fest, Ancona (with C. Cerrano)"]
+          ]] },
+        { icon: "i-school", title: "Pescare Show & schools",
+          text: "With C. Santolini I co-deliver training on recreational fisheries for elementary schools, commissioned by Pescare Show (January 2025; February 2026). I write the <a href='https://www.pescareshow.it/it/education'>Pescare Show education blog</a> and in 2026 I moderated the panel <i>We all pull from the same data source</i>. Watch: <a href='https://www.youtube.com/watch?v=u4oFxRK92CU'>Fishernet, Pescare Show 2026</a> · <a href='https://www.instagram.com/pescareshow/reel/DcBr4knCtpr/'>2026 edition reel</a>." },
+        { icon: "i-pulse", title: "sharkPulse Italia & fishers",
+          text: "Collaboration with <b>sharkPulse Italia</b>, a citizen science project that turns shark photos and sightings into data, and regular work with recreational and commercial fishers to promote sustainable practices and support data-driven management." }
+      ]},
+      { id: "field-sec", title: "Teaching & field activities", blocks: [
+        { icon: "i-boat", title: "Teaching at sea",
+          text: "Marine Scientist &amp; Educator with <b>EYOS Expeditions</b> since 2026: design and delivery of on-board marine science programmes. In May 2026 I led a family programme aboard S/Y Lammouche with underwater visual census (ClimateFish protocol), data shared on Observadores del Mar, eDNA sampling for the Mediterranean white shark project, water quality monitoring (EchoEarth protocol) and lessons on sharks, food webs, marine protected areas and climate change. <b>Yacht for Science</b>: <span class='todo'>TODO</span>" },
+        { icon: "i-cap", title: "University teaching",
+          text: "Teaching assistant at Università Politecnica delle Marche in <b>Zoology</b> (2019-2025), <b>Statistics</b> (2019-2020) and <b>Fishery Management</b> with F. Ferretti (2025-2026). Since 2023 I mentor MSc students of the University of Gabès (Tunisia) on shark DNA, population genetics and data science; expert at the <i>Workshop on DNA tools for sharks' assessment</i> (Sousse, 2023, WWF North Africa, University of Gabès, Virginia Tech). Supervisor of three IMBRSea MSc students (2021, 2023, 2024)." },
+        { icon: "i-tag", title: "Tagging expeditions",
+          text: "Participation in international tagging expeditions for large pelagic animals, helping to coordinate the retrieval of the tags." },
+        { icon: "i-tuna", title: "At-sea observer",
+          text: "In 2022, certified <b>National Observer for bluefin tuna and swordfish</b> on longline vessels for Oceanis s.r.l., collecting biometric data within ICCAT monitoring programmes, together with the coast guard and local commercial fishers." }
+      ]}
+    ],
+    links: [["Pescare Show Education", "https://www.pescareshow.it/it/education"],
+            ["Fishernet, Pescare Show 2026 (video)", "https://www.youtube.com/watch?v=u4oFxRK92CU"],
+            ["Pescare Show 2026 edition (Instagram reel)", "https://www.instagram.com/pescareshow/reel/DcBr4knCtpr/"],
+            ["The future of the Mediterranean Sea, CIESM Monaco 2026 (Instagram reel)", "https://www.instagram.com/reel/DWrBtOdoiLD/"]],
+    photos: [["images/public-1.jpg", ""], ["images/schools-1.jpg", ""], ["images/atsea-1.jpg", ""]] }
+];
+
+/* ---------- menu windows ---------- */
+var GROUPS = {
+  research:    { title: "Research" },
+  expeditions: { title: "Expeditions & Activities" }
+};
+
+/* ---------- Explore tiles on the home (each opens a window) ---------- */
+var EXPLORE = [
+  { topic: "flapper" },
+  { topic: "wsc" },
+  { topic: "medsharks" },
+  { topic: "igfa" },
+  { topic: "outreach" },
+  { page: "media", icon: "i-media", title: "Media", short: "Radio, TV and talks." }
+];
+
+/* ---------- photo carousels on home and media pages: [file, caption] ---------- */
+var HOME_PHOTOS = [
+  ["images/hero.jpg", "Shortfin mako at a baited camera. © White Shark Chase 2025"],
+  ["images/home-1.jpg", ""], ["images/home-2.jpg", ""], ["images/home-3.jpg", ""],
+  ["images/home-4.jpg", ""], ["images/home-5.jpg", ""], ["images/home-6.jpg", ""], ["images/home-7.jpg", ""]
+];
+var MEDIA_PHOTOS = [["images/media-1.jpg", ""], ["images/media-2.jpg", ""], ["images/media-3.jpg", ""]];
+
+/* ---------- CV: [when, what, where / details]. TODO = fill in ---------- */
+var CV = [
+  ["Positions", [
+    ["Jun 2026 · now", "Postdoctoral Researcher, MOSAIC project", "Queen's University Belfast, School of Biological Sciences, Queen's Marine Station, Portaferry. Critical habitat and habitat association work packages for elasmobranchs in Irish and Northern Irish waters."],
+    ["2026 · now", "Marine Scientist & Educator, EYOS Expeditions", "On-board marine science programmes. May 2026: family programme aboard S/Y Lammouche (ClimateFish visual census, Observadores del Mar, eDNA, water quality, science education)."],
+    ["2021 · now", "Field operator & project assistant, White Shark Chase", "Ferretti Lab, Department of Fish and Wildlife Conservation, Virginia Tech. Expeditions in 2021, 2022, 2023 and 2025."],
+    ["May · Jun 2025", "External collaborator, GhostNets project", "CoNISMa, Rome. Removal of ghost nets and abandoned fishing gear aboard a working barge; report writing."],
+    ["Jun · Oct 2022", "Research Fellow, SharkNoise and BOSE projects", "Stazione Zoologica Anton Dohrn, Palermo. Pelagic and benthic stereo-BRUVs, video analysis, underwater acoustic recorders, spectrogram analysis."],
+    ["May 2022", "National Observer for bluefin tuna and swordfish", "Oceanis s.r.l., Marsala. Biometric data on longline vessels within ICCAT monitoring programmes. Certified National Observer for Bluefin Tuna."],
+    ["Sep · Dec 2021", "Visiting student", "Ferretti Lab, Virginia Tech (Campus World award). Species distribution models (GAM, AquaMaps, PPM), large ecological datasets."]
+  ]],
+  ["Education", [
+    ["2022 · 2026", "PhD in Life and Environmental Sciences, Doctor Europaeus", "Università Politecnica delle Marche, fellowship co-funded by Stazione Zoologica Anton Dohrn. Outstanding cum laude. Thesis: <i>Ecology and population connectivity of lamnid sharks in the Mediterranean Sea</i>. Supervisors: C. Cerrano, T. Romeo, F. Colloca, F. Ferretti."],
+    ["2018 · 2021", "MSc in Marine Biology", "Università Politecnica delle Marche. 110/110 summa cum laude. Thesis: <i>Population assessment and trophic relationships of batoids in the North Adriatic Sea</i>."],
+    ["2014 · 2018", "BSc in Biology", "Università Politecnica delle Marche. Thesis: <i>Effects of removal of large predatory sharks from coastal oceans</i>."]
+  ]],
+  ["Research visits", [
+    ["2025", "Museo Nacional de Ciencias Naturales, Madrid", "With S. Taboada (Erasmus Traineeship). Genetic analysis, ddRAD library preparation, bioinformatics."],
+    ["2024", "Instituto de Ciencias del Mar, Barcelona", "With J. Navarro (BEOM Travel Grant). Fishery data, distribution models, stable isotopes in large predatory sharks."],
+    ["2023", "Ferretti Lab, Virginia Tech", "Point process models and genetic analysis on shortfin mako."],
+    ["2020", "Internship, AMP ENGAGE, Ustica", "Fish visual census of climate change indicators, citizen science."],
+    ["2017", "Internship, Stazione Zoologica Anton Dohrn, Naples", "Predatory behaviour of the common octopus."]
+  ]],
+  ["Grants & awards", [
+    ["2026", "Fisheries Society of the British Isles Travel Grant", "Sharks International 2026"],
+    ["2025", "Flying Sharks Stingray Fund", "Sharks International 2026 · <a href='https://flyingsharks.eu/research-fund-26-01-chiara-gambardella/'>flyingsharks.eu</a>"],
+    ["2025", "Save Our Seas Foundation (Shark Trust) &amp; EEA Travel Bursary", "European Elasmobranch Association Conference 2025"],
+    ["2025", "Erasmus Traineeship, UNIVPM", ""],
+    ["2024", "Stazione Zoologica BEOM Department Travel Grant Fellowship", ""],
+    ["2022", "American Elasmobranch Society Young Professional Recruitment Fund", ""],
+    ["2021", "Campus World Scholarship, UNIVPM", "Internship abroad"]
+  ]],
+  ["Service", [
+    ["2024 · now", "Co-Chair, Conservation Committee, Europe &amp; Mediterranean Council; IGFA Representative", "International Game Fish Association. Outreach with recreational anglers, international fishing fairs, quarterly reports."]
+  ]],
+  ["Research projects", [
+    ["2026 · now", "PEACEPLUS MOSAIC", "Postdoctoral researcher · Queen's University Belfast, funded by SEUPB"],
+    ["2021 · now", "sharkPulse", "Research collaborator · PI F. Ferretti, Virginia Tech"],
+    ["2021 · now", "Tracking the last white sharks of the Mediterranean Sea", "Research collaborator · PI F. Ferretti, Virginia Tech"],
+    ["2022 · 2023", "Shark Noise", "Fellowship · PI C. Cattano, funded by Blue Marine Foundation"],
+    ["2022 · 2023", "BOSE, Egadi Islands MPA", "Research collaborator · PI M. Milazzo, funded by Blue Marine Foundation"]
+  ]],
+  ["Teaching", [
+    ["2025 · 2026", "Teaching assistant, Fishery Management (BSc Economics)", "UNIVPM, with F. Ferretti · 30 h · R setup and data analysis sessions"],
+    ["2019 · 2025", "Teaching assistant, Zoology (BSc Biology)", "UNIVPM · 2019-20 (80 h), 2023-24 (50 h), 2024-25 (50 h) · species identification exams, tutoring"],
+    ["2019 · 2020", "Teaching assistant, Statistics (BSc Biology)", "UNIVPM · 80 h · tutoring and lecture support"],
+    ["2023 · now", "Instructor, genetics workshop", "Mentoring MSc students of the University of Gabès on shark DNA extraction, quantification and visualisation; population genetics, data science and phylogenetics"],
+    ["2023", "Expert, Workshop on DNA tools for sharks' assessment", "Sousse, Tunisia · WWF North Africa, University of Gabès, Virginia Tech"]
+  ]],
+  ["Student supervision", [
+    ["2024", "R. Mendes, IMBRSea MSc", "Distribution of large pelagics in the Mediterranean Sea (6 weeks)"],
+    ["2023", "A. Sanz, IMBRSea MSc", "Fish assemblages on the Conero coast with BRUVs (6 weeks)"],
+    ["2021", "M. Beakert, IMBRSea MSc", "Stereo-BRUVs (6 weeks)"]
+  ]],
+  ["Courses & workshops", [
+    ["2025, 2023", "The Italian public research to support the conservation of Mediterranean elasmobranchs", "Stazione Zoologica Anton Dohrn, Naples"],
+    ["2022", "Cineca: Data Science with R, introduction to machine learning", "Online"],
+    ["2022", "Software Carpentry: Unix, Git, Python, R", "Online"],
+    ["2021", "Statistics for Ecobiology (auditing)", "Sapienza University of Rome"],
+    ["2021", "WWF-ARK International Sharks and Rays and Rewilding Workshop", "Online"]
+  ]],
+  ["Skills", [
+    ["field", "Stereo-BRUV design, calibration and video analysis · eDNA water sampling · international tagging expeditions for large pelagic animals · help coordinating tag retrieval · underwater acoustic recorders · biometrics and non-lethal sampling · elasmobranch dissection", ""],
+    ["lab", "DNA extraction, quantification and amplification · ddRAD library preparation · stable isotopes (δ¹³C, δ¹⁵N)", ""],
+    ["analysis", "R, Python, INLA · species distribution and spatio-temporal models · population genomics (Stacks, BayeScan, Arlequin) · QGIS · LaTeX, RMarkdown · Bash, Git", ""],
+    ["other", "Adobe Photoshop and Lightroom · SSI Freediving level I", ""]
+  ]],
+  ["References", [
+    ["", "Available on request", "C. Cerrano (UNIVPM) · F. Ferretti (Virginia Tech) · T. Romeo (SZN) · F. Colloca (SZN)"]
+  ]]
+];
+
+/* ---------- media (newest first) ---------- */
+var MEDIA = [
+  { when: "Aug 2026", what: "<b>BBC Radio Ulster</b> · On the blue shark incident in Waterford" },
+  { when: "Jun 2026", what: "<b>BBC Radio Ulster</b> · Basking sharks in UK and Irish seas" },
+  { when: "Mar 2026", what: "<b>AcliTerra &amp; CIESM</b>, Monaco · <a href='https://www.instagram.com/reel/DWrBtOdoiLD/'>The future of the Mediterranean Sea</a>" },
+  { when: "2026",     what: "<b>Pescare Show</b> · <a href='https://www.youtube.com/watch?v=u4oFxRK92CU'>Fishernet, Pescare Show 2026</a>" },
+  { when: "2026",     what: "<b>Flying Sharks</b> · <a href='https://flyingsharks.eu/research-fund-26-01-chiara-gambardella/'>Research Fund grantee</a>" },
+  { when: "Dec 2025", what: "<b>BBC News</b> · <a href='https://www.bbc.com/news/articles/c9qe9wvq534o'>Live interview on Mediterranean white sharks</a>" },
+  { when: "",         what: "<b>Pescare Show</b> · <a href='https://www.pescareshow.it/it/education'>Education programme</a>" }
+];
+
+/* ---------- contact ---------- */
+var CONTACT = '<p class="q">Working on <em>large marine species</em>?</p>' +
+  '<p>Sharks, tunas, giant skates: if your questions are about where they live, how they move or where they breed, I would love to compare notes, share data or plan fieldwork together.</p>' +
+  '<div class="btns">' +
+  '<a class="btn main" href="mailto:c.gambardella@qub.ac.uk"><svg viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="M3 7l9 6 9-6"/></svg>c.gambardella@qub.ac.uk</a>' +
+  '<a class="btn main" href="mailto:c.gambardella@pm.univpm.it"><svg viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="M3 7l9 6 9-6"/></svg>c.gambardella@pm.univpm.it</a>' +
+  '</div><div class="btns">' +
+  '<a class="btn" href="https://www.linkedin.com/in/chiara-gambardella/"><svg viewBox="0 0 24 24"><path d="M7 17L17 7M9 7h8v8"/></svg>LinkedIn</a>' +
+  '<a class="btn" href="https://scholar.google.com/citations?user=0toJwMkAAAAJ&hl=en"><svg viewBox="0 0 24 24"><path d="M7 17L17 7M9 7h8v8"/></svg>Google Scholar</a>' +
+  '<a class="btn" href="https://www.researchgate.net/profile/Chiara-Gambardella"><svg viewBox="0 0 24 24"><path d="M7 17L17 7M9 7h8v8"/></svg>ResearchGate</a>' +
+  '<a class="btn" href="https://orcid.org/0000-0001-9943-5028"><svg viewBox="0 0 24 24"><path d="M7 17L17 7M9 7h8v8"/></svg>ORCID</a>' +
+  '<a class="btn" href="https://www.instagram.com/_saerun/"><svg viewBox="0 0 24 24"><path d="M7 17L17 7M9 7h8v8"/></svg>Instagram</a>' +
+  '</div><p class="based">Marine Laboratory, Queen\'s University Belfast</p>';
+
+/* ---------- publications (k = short key used by topics) ---------- */
+var PUBS = {
+  published: [
+    { k: "injury", a: "Smith SDG, Dorrian-Smith MA, Ferreira GSNR, Gambardella C, Glynn F, Mills RD, Mitchell S, Randhawa HS, Collins PC", y: "",
+      t: "Chronic sublethal injury in a critically endangered flapper skate (<i>Dipturus intermedius</i>): in situ evidence consistent with trawl capture",
+      j: "Aquaculture, Fish and Fisheries", doi: "10.1002/aff2.70361" },
+    { k: "eagleray", a: "Grancagnolo D, Aglieri G, Cattano C, Gambardella C, Turco G, Milazzo M", y: "2026",
+      t: "Distribution and characterization of threatened common eagle ray aggregations in the Central-Western Mediterranean Sea: opportunities for regional conservation actions",
+      j: "Aquatic Conservation", doi: "10.1002/aqc.70435" },
+    { k: "genetics", first: true, a: "Gambardella C, Giannelli F, Fernández-Corredor E, García-Barcelona S, Jenrette J, Moro S, Shea B, Colloca F, Romeo T, Echwiki K, Zammit M, Lemsi C, Ferretti F, Trucchi E, Taboada S, Navarro J", y: "2026",
+      t: "Evidence of genetic continuity in the shortfin mako shark (<i>Isurus oxyrinchus</i>) between the Eastern Atlantic and Mediterranean basins",
+      j: "Ecology and Evolution", doi: "10.1002/ece3.73261" },
+    { k: "trophic", first: true, a: "Gambardella C, Fernández-Corredor E, Moro S, Echwiki K, Jenrette JF, Lemsi C, Schallert RJ, Shea B, Zammit M, Cerrano C, Colloca F, Romeo T, Navarro J, Ferretti F", y: "2025",
+      t: "Trophic niche partitioning between the white shark (<i>Carcharodon carcharias</i>) and the shortfin mako (<i>Isurus oxyrinchus</i>) in the central Mediterranean Sea",
+      j: "Wildlife Research 52, WR25028", doi: "10.1071/WR25028" },
+    { k: "urchin", a: "Marchesi V, Cerrano C, Gambardella C, Pulido Mantas T, Roveta C, Santana Mendonça de Oliveira JL, Turicchia E, Ponti M, Di Camillo CG", y: "2025",
+      t: "A baseline for the conservation of the native and protected <i>Centrostephanus longispinus</i> (Philippi, 1845) and the management of the invasive <i>Diadema setosum</i> (Leske, 1778) (Echinoidea: Diadematidae) in the Mediterranean Sea",
+      j: "Aquatic Conservation", doi: "10.1002/aqc.70155" },
+    { k: "wstracks", a: "Ferretti F, Shea B, Gambardella C, Jenrette J, Moro S, Echwikhi K, Schallert RJ, Gallagher A, Block BA, Chapple T", y: "2024",
+      t: "On the tracks of white sharks in the Mediterranean Sea",
+      j: "Frontiers in Marine Science 11", doi: "10.3389/fmars.2024.1425511" },
+    { k: "makotrack", a: "Shea BD, Chapple TK, Echwikhi K, Gambardella C, Jenrette JF, Moro S, Schallert RJ, Block BA, Ferretti F", y: "2024",
+      t: "First satellite track of a juvenile shortfin mako shark (<i>Isurus oxyrinchus</i>) in the Mediterranean Sea",
+      j: "Frontiers in Marine Science 11", doi: "10.3389/fmars.2024.1423507" },
+    { k: "edna", a: "Jenrette J, Truelove K, Moro S, Dunn N, Chapple T, Gallagher A, Gambardella C, Schallert R, Shea B, Curnick D, Block B, Ferretti F", y: "2023",
+      t: "Detecting Mediterranean white sharks with environmental DNA",
+      j: "Oceanography", doi: "10.5670/oceanog.2023.s1.28" },
+    { k: "photogram", a: "Pulido Mantas T, Roveta C, Calcinai B, Di Camillo CG, Gambardella C, Gregorin C, Coppari M, Marrocco T, Puce S, Riccardi A, Cerrano C", y: "2023",
+      t: "Photogrammetry, from the land to the sea and beyond: a unifying approach to study terrestrial and marine environments",
+      j: "Journal of Marine Science and Engineering 11(4), 759", doi: "10.3390/jmse11040759" },
+    { k: "yoy", a: "Cattano C, Gambardella C, Grancagnolo D, Principato E, Aglieri G, Turco G, Quattrocchi F, Milazzo M", y: "2023",
+      t: "Multiple interannual records of young-of-the-year identify an important area for the protection of the shortfin mako, <i>Isurus oxyrinchus</i>",
+      j: "Marine Environmental Research 192, 106217", doi: "10.1016/j.marenvres.2023.106217" }
+  ],
+  review: [
+    { k: "lifehist", first: true, a: "Gambardella C, Dorrian-Smith MA, Glynn F, Smith SDG, Collins PC", y: "UNDER REVIEW",
+      t: "Life history as a limit to exploitability: the case of the critically endangered flapper skate", j: "Journal of the Marine Biological Association of the UK" },
+    { k: "makoabund", first: true, a: "Gambardella C, Moro S, Panunzi G, Martino S, Jona-Lasinio G, Serena F, Colloca F, Romeo T, Ferretti F", y: "under review",
+      t: "Integrating opportunistic records to model spatio-temporal abundance of shortfin mako sharks in the Mediterranean Sea", j: "Diversity and Distributions" },
+    { k: "hammer", a: "Moro S, Gambardella C, Pedrazzi G, Fanelli E, Pace DS, Santoro M, Virgili R, Barone M, Ferretti F, Serena F, Colloca F, Crocetta F", y: "under review",
+      t: "Shadows from the past: extremely rare occurrence of a young-of-the-year <i>Sphyrna zygaena</i> (Carcharhiniformes: Sphyrnidae) in the Mediterranean Sea", j: "Marine Ecology" },
+    { k: "coral", a: "Coppari M, Roveta C, Colonna C, Gambardella C, Gregorin C, Marrocco T, Pulido Mantas T, Di Camillo C, Willis TJ, Cerrano C", y: "under review",
+      t: "The undisclosed interactions between the black coral <i>Antipathella subpinnata</i> (Ellis &amp; Solander, 1786) and its associated fauna", j: "Marine Environmental Research" },
+    { k: "wsprotect", a: "Ferretti F, Chapple T, Carvalho F, Echwikhi K, Almabruk S, Elmgawshi A, Block B, Chatti M, Gambardella C, Glancy J, Jenrette J, Lemsi C, Moro S, Shea B", y: "submitted",
+      t: "Protecting white sharks in their last Mediterranean stronghold", j: "Conservation Letters" },
+    { k: "hammertun", a: "Echwikhi K, Lemsi C, Zammit Chatti M, Gambardella C, Jenrette J, Moro S, Shea B, Ferretti F", y: "submitted",
+      t: "New occurrence records of the smooth hammerhead shark (<i>Sphyrna zygaena</i>) in Tunisian waters", j: "The European Zoological Journal" },
+    { k: "jaw", a: "Zammit Chatti M, Echwikhi K, Gambardella C, Zouari N, Jenrette J, Shea B, Lemsi C, Ferretti F", y: "in prep.",
+      t: "Jaw morphometric analysis of white sharks (<i>Carcharodon carcharias</i>) in Tunisian waters", j: "" }
+  ],
+  talks: [
+    { k: "t-masts", first: true, a: "Gambardella C, Moro S, Dorrian-Smith MA, Glynn F, Smith SDG, Collins P", y: "2026",
+      t: "From hauls to hotspots: joint species models for OSPAR-listed elasmobranchs in a trawled seascape",
+      j: "MASTS 2026, Glasgow (ePoster)" },
+    { k: "t-si", first: true, a: "Gambardella C, et al.", y: "2026",
+      t: "Gene flow across the Eastern Atlantic Ocean and Mediterranean Sea in shortfin mako sharks: swimming past borders",
+      j: "Sharks International 2026, Colombo, Sri Lanka" },
+    { k: "t-eea", first: true, a: "Gambardella C, et al.", y: "2025",
+      t: "Going with the flow: genetic continuity in a highly migratory shark between Eastern Atlantic Ocean and Mediterranean Sea",
+      j: "European Elasmobranch Association 2025, Rotterdam" },
+    { k: "t-ices", first: true, a: "Gambardella C, Moro S, Serena F, Colloca F, Romeo T, Ferretti F", y: "2024",
+      t: "Exploring the spatio-temporal patterns of abundance of the shortfin mako in the Mediterranean Sea",
+      j: "ICES Annual Science Conference 2024, Gateshead", doi: "10.17895/ices.pub.27269007" },
+    { k: "t-sg1", a: "Jenrette J, Truelove N, Moro S, Dunn N, Chapple T, Gallagher A, Gambardella C, Schallert R, Shea B, Curnick D, Block B, Ferretti F", y: "2023",
+      t: "Detecting Mediterranean white sharks with environmental DNA and particle distribution hindcasting",
+      j: "White Shark Global 2023, Port Lincoln, Australia" },
+    { k: "t-sg2", a: "Ferretti F, Jenrette J, Shea B, Gambardella C, Moro S, Echwiki K, Chapple T, Gallagher A, Schallert R, Block B", y: "2023",
+      t: "The White Shark Chase: tracking the last white sharks in the Mediterranean Sea",
+      j: "White Shark Global 2023, Port Lincoln, Australia" },
+    { k: "a-graspa", a: "Moro S, Palma M, Jona-Lasinio G, Colloca F, Gambardella C, Ferretti F", y: "2021",
+      t: "Using high resolution density models to predict white shark hot spots in the Mediterranean Sea",
+      j: "GRASPA 2021 Conference (poster)" },
+    { k: "a-glex", a: "Ferretti F, Chapple T, Gallagher A, Gambardella C, Jenrette J, Moro S, Schallert R, Shea B", y: "2021",
+      t: "Chasing white sharks in the Mediterranean Sea",
+      j: "GLEX 2021, The Explorers Club Global Exploration Summit, Lisbon and Azores" }
+  ]
+};
+
+
+/* #####################################################################
+   ENGINE. No need to edit below.
+   ##################################################################### */
+function $(s) { return document.querySelector(s); }
+function svg(id, cls) { return '<svg class="ico ' + (cls || "") + '"><use href="#' + id + '"/></svg>'; }
+function topic(id) { return TOPICS.filter(function (t) { return t.id === id; })[0]; }
+var ALLPUBS = [].concat(PUBS.published, PUBS.review, PUBS.talks);
+
+/* references */
+function me(a) { return a.replace(/Gambardella C/g, '<span class="me">Gambardella C</span>'); }
+function refLine(p) {
+  return me(p.a) + (p.y ? " (" + p.y + ")" : "") + ". " + p.t + (/…$/.test(p.t) ? " " : ". ") +
+    (p.j ? "<i>" + p.j + "</i>. " : "") +
+    (p.doi ? '<a class="doi" href="https://doi.org/' + p.doi + '">doi:' + p.doi + "</a>" : "");
+}
+function refList(list) {
+  return '<ol class="refs">' + list.map(function (p, i) { return '<li><span class="n">[' + (i + 1) + ']</span><span>' + refLine(p) + "</span></li>"; }).join("") + "</ol>";
+}
+function renderRefs(filter) {
+  var groups = [["published", "Peer-reviewed articles"], ["review", "Under review & in preparation"], ["talks", "Conference contributions"]];
+  var html = "";
+  groups.forEach(function (g) {
+    var list = PUBS[g[0]].filter(function (p) { return filter === "all" || p.first; });
+    if (!list.length) return;
+    html += '<div class="refs-head" id="' + g[0] + '"><h3>' + g[1] + '</h3><span>n = ' + list.length + '</span></div>' + refList(list);
+  });
+  $("#refs").innerHTML = html;
+}
+renderRefs("all");
+$("#filter").addEventListener("click", function (e) {
+  var b = e.target.closest("button"); if (!b) return;
+  this.querySelectorAll("button").forEach(function (x) { x.classList.remove("on"); });
+  b.classList.add("on"); renderRefs(b.dataset.f);
+});
+
+/* CV */
+$("#cvBody").innerHTML = CV.map(function (sec) {
+  return '<section class="cv-sec"><h2>' + sec[0] + "</h2>" + sec[1].map(function (r) {
+    return '<div class="cv-row"><span class="when">' + r[0].replace(/TODO/g, "<span class='todo'>TODO</span>") + "</span><span><b>" + r[1] + "</b>" + (r[2] ? "<small>" + r[2].replace(/TODO/g, "<span class='todo'>TODO</span>") + "</small>" : "") + "</span></div>";
+  }).join("") + "</section>";
+}).join("");
+
+/* Google Scholar metrics: shown only when data/scholar.json has numbers (updated weekly by GitHub) */
+fetch("data/scholar.json", { cache: "no-store" }).then(function (r) { return r.json(); }).then(function (d) {
+  if (d.citations == null) return;
+  var when = d.updated ? new Date(d.updated).toLocaleDateString("en-GB", { day: "numeric", month: "short", year: "numeric" }) : "";
+  var box = $("#metrics");
+  box.innerHTML = '<div class="tiles">' +
+    '<div class="tile-m"><span class="num">' + d.citations + '</span><span class="lab">citations</span></div>' +
+    '<div class="tile-m"><span class="num">' + d.h_index + '</span><span class="lab">h-index</span></div>' +
+    '<div class="tile-m"><span class="num">' + d.i10_index + '</span><span class="lab">i10-index</span></div>' +
+    '</div><div class="src">Source: <a href="' + d.source + '">Google Scholar</a>' + (when ? " · updated " + when : "") + "</div>";
+  box.hidden = false;
+}).catch(function () {});
+
+/* media + contact */
+$("#mediaAll").innerHTML = MEDIA.map(function (m) { return '<li><span class="when">' + m.when + "</span><span>" + m.what + "</span></li>"; }).join("");
+$("#corrHome").innerHTML = CONTACT;
+$("#corrPage").innerHTML = CONTACT;
+
+/* explore tiles */
+$("#explore").innerHTML = EXPLORE.map(function (e, i) {
+  var t = e.topic ? topic(e.topic) : e;
+  return '<button class="tile" data-tile="' + i + '">' + svg(t.icon) + "<b>" + t.title + "</b><small>" + t.short + "</small></button>";
+}).join("");
+
+/* topic page */
+function chipsHTML(keys) {
+  return '<div class="methods">' + keys.map(function (k) { var m = METHODS[k]; return "<div>" + svg(m[0]) + "<span><b>" + m[1] + "</b><small>" + m[2] + "</small></span></div>"; }).join("") + "</div>";
+}
+function withHTML(keys) {
+  return '<div class="with">' + keys.map(function (k) {
+    return LOGOS[k] ? '<span class="logo"><img src="' + LOGOS[k][0] + '" alt="' + LOGOS[k][1] + '"></span>' : '<span class="txt">' + k + "</span>";
+  }).join("") + "</div>";
+}
+function renderTopic(t) {
+  var h = '<div class="ptitle"><div><div class="crumb">' + GROUPS[t.group].title + '</div><h1>' + t.title + '</h1><div class="tag">' + t.tag + "</div></div>" + svg(t.icon) + "</div>";
+  h += '<div class="split"><div class="main">';
+  if (t.what) h += '<section id="what"><h2>What it is</h2>' + t.what + "</section>";
+  function blk(b) {
+    var more = b.list ? '<details class="morelist"><summary>' + b.list[0] + " (" + b.list[1].length + ")</summary><ul>" +
+      b.list[1].map(function (r) { return '<li><span class="when">' + r[0] + "</span><span>" + r[1] + "</span></li>"; }).join("") + "</ul></details>" : "";
+    return '<div class="blk">' + svg(b.icon) + "<div><h3>" + b.title + "</h3><p>" + b.text + "</p>" + more + "</div></div>";
+  }
+  if (t.blocks) h += '<section id="activities"><h2>Activities</h2><div class="blocks">' + t.blocks.map(blk).join("") + "</div></section>";
+  if (t.sections) t.sections.forEach(function (sec) { h += '<section id="' + sec.id + '"><h2>' + sec.title + '</h2><div class="blocks">' + sec.blocks.map(blk).join("") + "</div></section>"; });
+  if (t.why) h += '<section id="why"><h2>Why it matters</h2>' + t.why + "</section>";
+  if (t.methods) h += '<section id="how"><h2>How</h2>' + chipsHTML(t.methods) + "</section>";
+  if (t.with) h += '<section id="with"><h2>With</h2>' + withHTML(t.with) + (t.note ? '<p class="small-note">' + t.note + "</p>" : "") + "</section>";
+  var pubs = (t.papers || []).map(function (k) { return ALLPUBS.filter(function (p) { return p.k === k; })[0]; }).filter(Boolean);
+  if (pubs.length) h += '<section id="papers-rel"><h2>Related work</h2>' + refList(pubs) + "</section>";
+
+  if (t.links) h += '<section id="links"><h2>Links</h2><ul class="links">' + t.links.map(function (l) { return '<li><a href="' + l[1] + '">' + l[0] + "</a></li>"; }).join("") + "</ul></section>";
+  h += '</div><aside class="side">' + (t.photos || []).map(function (ph) {
+    return '<figure><img src="' + ph[0] + '" alt="" onerror="ph(this)">' + (ph[1] ? "<figcaption>" + ph[1] + "</figcaption>" : "") + "</figure>";
+  }).join("") + "</aside></div>";
+  $("#topicPage").innerHTML = h;
+  initCarousels($("#topicPage"));
+}
+
+/* carousels */
+function carouselHTML(photos) {
+  return '<div class="carousel"><div class="track">' + photos.map(function (p, i) {
+    return '<figure><img src="' + p[0] + '" alt="" onerror="ph(this)">' + (p[1] ? "<figcaption>" + p[1] + "</figcaption>" : "") + "</figure>";
+  }).join("") + '</div><button class="arrow prev" aria-label="Previous">‹</button><button class="arrow next" aria-label="Next">›</button><div class="dots"></div></div>';
+}
+function initCarousels(root) {
+  root.querySelectorAll(".carousel").forEach(function (c) {
+    if (c.dataset.ready) return; c.dataset.ready = 1;
+    var track = c.querySelector(".track"), figs = track.children, dots = c.querySelector(".dots"), timer;
+    for (var i = 0; i < figs.length; i++) dots.insertAdjacentHTML("beforeend", "<button></button>");
+    function idx() { var w = figs[0].offsetWidth + 12; return Math.round(track.scrollLeft / w); }
+    function to(i) { i = (i + figs.length) % figs.length; track.scrollTo({ left: figs[i].offsetLeft - (track.offsetWidth - figs[i].offsetWidth) / 2 - track.offsetLeft, behavior: "smooth" }); }
+    function mark() { var k = idx(); [].forEach.call(dots.children, function (d, j) { d.classList.toggle("on", j === k); }); }
+    c.querySelector(".prev").onclick = function () { to(idx() - 1); };
+    c.querySelector(".next").onclick = function () { to(idx() + 1); };
+    [].forEach.call(dots.children, function (d, j) { d.onclick = function () { to(j); }; });
+    track.addEventListener("scroll", function () { clearTimeout(c._t); c._t = setTimeout(mark, 80); });
+    function play() { stop(); timer = setInterval(function () { if (c.offsetParent) to(idx() + 1); }, 5000); }
+    function stop() { clearInterval(timer); }
+    c.addEventListener("mouseenter", stop); c.addEventListener("mouseleave", play);
+    c.addEventListener("touchstart", stop, { passive: true });
+    mark(); play();
+  });
+}
+$("#homeCarousel").innerHTML = carouselHTML(HOME_PHOTOS);
+$("#mediaCarousel").innerHTML = carouselHTML(MEDIA_PHOTOS);
+initCarousels(document);
+
+/* router: pages are home, papers, media, contact or a topic id */
+function go(page, sub, noHistory) {
+  closeAll();
+  var t = topic(page);
+  var view = t ? "topic" : (["home", "papers", "media", "cv", "contact"].indexOf(page) > -1 ? page : "home");
+  if (t) renderTopic(t);
+  document.querySelectorAll(".view").forEach(function (v) { v.classList.toggle("on", v.dataset.view === view); });
+  var navKey = t ? t.group : view;
+  document.querySelectorAll(".nav > button").forEach(function (b) { b.classList.toggle("active", b.dataset.p === navKey); });
+    document.title = (t ? t.title + " · " : view !== "home" ? view.charAt(0).toUpperCase() + view.slice(1) + " · " : "") + "Chiara Gambardella, PhD";
+  var el = sub && document.getElementById(sub);
+  if (el) setTimeout(function () { window.scrollTo({ top: el.getBoundingClientRect().top + window.scrollY - 80, behavior: "smooth" }); }, 50);
+  else window.scrollTo(0, 0);
+  if (!noHistory) { try { history.pushState({ p: page, s: sub }, "", "#/" + (page === "home" ? "" : page) + (sub ? "/" + sub : "")); } catch (e) {} }
+}
+function fromHash() { var p = (location.hash || "").replace(/^#\/?/, "").split("/"); go(p[0] || "home", p[1], true); }
+window.addEventListener("popstate", fromHash);
+
+/* menu windows */
+var win = $("#win"), openBtn = null;
+function closeAll() {
+  win.classList.remove("on"); $("#modal").classList.remove("on");
+  document.querySelectorAll(".nav > button").forEach(function (b) { b.classList.remove("open"); });
+  openBtn = null;
+}
+function openWin(btn) {
+  var g = btn.dataset.win;
+  if (openBtn === btn) { closeAll(); return; }
+  closeAll();
+  var items = TOPICS.filter(function (t) { return t.group === g; });
+  win.innerHTML = '<div class="head">' + GROUPS[g].title + "</div>" + items.map(function (t) {
+    return '<button data-go="' + t.id + '">' + svg(t.icon) + "<span><b>" + t.title + "</b><small>" + t.short + "</small></span></button>";
+  }).join("");
+  var r = btn.getBoundingClientRect();
+  win.style.left = Math.max(10, Math.min(r.left, window.innerWidth - win.offsetWidth - 10)) + "px";
+  win.classList.add("on"); btn.classList.add("open"); openBtn = btn;
+}
+
+/* explore windows (modal) */
+function openModal(i) {
+  var e = EXPLORE[i], t = e.topic ? topic(e.topic) : null, h;
+  if (t) {
+    h = '<div class="top">' + svg(t.icon) + '<div><h3>' + t.title + '</h3><div class="tag">' + t.tag + "</div></div></div>" + t.what +
+        (t.sections ? '<div class="list">' + t.sections.map(function (sec) { return sec.blocks.map(function (b) { return '<button data-go="' + t.id + '" data-sub="' + sec.id + '">' + svg(b.icon) + "<span><b>" + b.title + "</b></span></button>"; }).join(""); }).join("") + "</div>" : "") +
+        (t.methods ? '<div class="chips">' + t.methods.map(function (k) { return '<span class="chip">' + svg(METHODS[k][0]) + METHODS[k][1] + "</span>"; }).join("") + "</div>" : "") +
+        '<button class="open-page" data-go="' + t.id + '">open the page →</button>';
+  } else if (e.group) {
+    h = '<div class="top">' + svg(e.icon) + '<div><h3>' + e.title + '</h3><div class="tag">' + e.short + '</div></div></div><div class="list">' +
+        TOPICS.filter(function (x) { return x.group === e.group; }).map(function (x) {
+          return '<button data-go="' + x.id + '">' + svg(x.icon) + "<span><b>" + x.title + "</b><small>" + x.short + "</small></span></button>";
+        }).join("") + "</div>";
+  } else {
+    h = '<div class="top">' + svg(e.icon) + '<div><h3>' + e.title + '</h3><div class="tag">' + e.short + '</div></div></div><ul class="media">' +
+        MEDIA.slice(0, 4).map(function (m) { return '<li><span class="when">' + m.when + "</span><span>" + m.what + "</span></li>"; }).join("") +
+        '</ul><button class="open-page" data-go="' + e.page + '">all media →</button>';
+  }
+  $("#box").innerHTML = '<button class="x" aria-label="Close">×</button>' + h;
+  $("#modal").classList.add("on");
+}
+
+/* one click handler for everything */
+document.addEventListener("click", function (e) {
+  var el;
+  if ((el = e.target.closest("[data-win]"))) { e.preventDefault(); e.stopPropagation(); openWin(el); return; }
+  if ((el = e.target.closest("[data-go]"))) { e.preventDefault(); go(el.dataset.go, el.dataset.sub); return; }
+  if ((el = e.target.closest("[data-tile]"))) { openModal(+el.dataset.tile); return; }
+  if (e.target.closest(".x") || e.target.id === "modal") { closeAll(); return; }
+  var img = e.target.closest(".track img, .hero > img, .side img");
+  if (img) {
+    $("#lbImg").src = img.src;
+    var cap = img.parentElement.querySelector("figcaption");
+    $("#lbCap").textContent = cap ? cap.textContent : "";
+    $("#lightbox").classList.add("on"); return;
+  }
+  if (e.target.closest("#lightbox")) { $("#lightbox").classList.remove("on"); return; }
+  if (!e.target.closest("#win")) { win.classList.remove("on"); document.querySelectorAll(".nav > button").forEach(function (b) { b.classList.remove("open"); }); openBtn = null; }
+});
+document.addEventListener("keydown", function (e) { if (e.key === "Escape") { closeAll(); $("#lightbox").classList.remove("on"); } });
+window.addEventListener("resize", function () { if (openBtn) { var b = openBtn; openBtn = null; openWin(b); } });
+
+/* sun / moon */
+$("#theme").addEventListener("click", function () {
+  var r = document.documentElement, t = r.getAttribute("data-theme") === "day" ? "night" : "day";
+  r.setAttribute("data-theme", t);
+  try { localStorage.setItem("cg-theme", t); } catch (e) {}
+});
+
+$("#yr").textContent = new Date().getFullYear();
+fromHash();
+</script>
+</body>
+</html>
